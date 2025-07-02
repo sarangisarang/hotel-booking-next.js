@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles for body and html */
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    @apply bg-gradient-to-br from-blue-100 to-purple-50 dark:from-gray-900 dark:to-gray-800;
+    color: #1f2937;
+    min-height: 100%;
+}
+
+/* Remove default link styling */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Smooth transitions */
+button,
+input,
+select,
+textarea {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #60a5fa, #a78bfa);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Centered container utility */
+.container-center {
+    @apply flex justify-center items-center min-h-screen;
+}
+
+/* Ultra modern form container */
+.form-card {
+    @apply bg-white dark:bg-gray-900 p-10 rounded-3xl shadow-2xl w-full max-w-2xl border border-gray-200 dark:border-gray-700;
+}
+
+/* Headings with stylish symbols */
+.form-heading {
+    @apply text-4xl font-extrabold text-center text-gray-800 dark:text-white mb-4 tracking-tight flex items-center justify-center gap-2;
+}
+.form-subheading {
+    @apply text-center text-gray-600 dark:text-gray-300 mb-8 text-lg;
+}
+
+/* Input styling */
+.form-input {
+    @apply w-full px-5 py-4 border border-gray-300 dark:border-gray-600 rounded-xl text-lg focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-gray-800 dark:text-white;
+}
+
+/* Button styling */
+.form-button {
+    @apply w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold text-lg py-4 rounded-xl shadow-lg transform hover:scale-105 transition duration-300;
+}
+
+/* Feedback text styling */
+.feedback-error {
+    @apply text-center text-red-500 font-medium mt-4;
+}
+.feedback-success {
+    @apply text-center text-green-500 font-medium mt-4;
+}
+
+/* Additional hover effects */
+button:hover {
+    transform: scale(1.03);
+}
+input:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.3);
+}
+.dropdown {
+    width: 200px;
+    padding: 5px;
+    background-color: white;
+    color: black;
+}
